@@ -6,7 +6,7 @@ using namespace std;
 bool leapYear(int year){
     bool isLeap = false;
     
-    if(((year % 4 == 0) & (year % 100 != 0)) || (year % 400 == 0))
+    if(((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
         isLeap = true;
     
     return isLeap;
@@ -119,7 +119,7 @@ void monthPrinter(int month, int year){
             currentDay = dayWeek(i, month, year);
             cout << i << "\t";
             i++;
-        }while(currentDay && i <= numDays(month, year)); //switches line when saturday
+        }while(currentDay && i <= numDays(month, year)); //switches line when saturday(0)
         cout << endl;
     }
 }
@@ -142,12 +142,12 @@ int main(){
     cout << "year here boiiiiiiiiii" << endl;
     cin >> year;
     cout << endl << endl;
-    //cout << leapYear(year) << endl;
-    //cout << numDays(month, year) << endl;
-    //cout << numMonthtoStr(month) << endl;
-    //cout << codeMonth(month, year) << endl;
-    //cout << numWeektoStr(dayWeek(day, month, year)) <<endl <<endl << endl;
-    //monthPrinter(month, year);
+    cout << leapYear(year) << endl;
+    cout << numDays(month, year) << endl;
+    cout << numMonthtoStr(month) << endl;
+    cout << codeMonth(month, year) << endl;
+    cout << numWeektoStr(dayWeek(day, month, year)) <<endl <<endl << endl;
+    monthPrinter(month, year);
     yearPrinter(year);
 
     return 0;
