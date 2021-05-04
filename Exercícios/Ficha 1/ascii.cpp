@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main()
@@ -11,6 +12,7 @@ int main()
         cout << "Write smth, write " << STOP << " to stop." << endl;
         cin >> symbol;
         cout << symbol << " is " << int(symbol) << " in ASCII" << endl;
+        cout << stoi("1 aaa 2") << endl;
     }
 
     return 0;
